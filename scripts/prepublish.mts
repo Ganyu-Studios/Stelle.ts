@@ -13,13 +13,9 @@ const {
 	...newPackageJsonRaw
 } = packageJson as typeof packageJson & { private: boolean };
 
-const { shoukaku } = _dev;
 
 const newPackageJson = {
 	...newPackageJsonRaw,
-	devDependencies: {
-		shoukaku,
-	},
 };
 
 await writeFile(".npm/package.json", JSON.stringify(newPackageJson, null, 4), "utf-8");

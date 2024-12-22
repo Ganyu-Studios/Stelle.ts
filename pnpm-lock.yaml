@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      ws:
+        specifier: ^8.18.0
+        version: 8.18.0
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.3
@@ -14,15 +18,15 @@ importers:
       '@types/node':
         specifier: ^22.7.6
         version: 22.7.6
+      '@types/ws':
+        specifier: ^8.5.13
+        version: 8.5.13
       husky:
         specifier: ^9.1.6
         version: 9.1.6
       lint-staged:
         specifier: ^15.2.10
         version: 15.2.10
-      shoukaku:
-        specifier: github:shipgirlproject/Shoukaku
-        version: https://codeload.github.com/shipgirlproject/Shoukaku/tar.gz/2f50cb7f422a4d953bbb99d13b3bb239fe487978
       tsup:
         specifier: ^8.3.0
         version: 8.3.0(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1)
@@ -484,6 +488,9 @@ packages:
 
   '@types/node@22.7.6':
     resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
+
+  '@types/ws@8.5.13':
+    resolution: {integrity: sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA==}
 
   '@vitest/expect@2.1.3':
     resolution: {integrity: sha512-SNBoPubeCJhZ48agjXruCI57DvxcsivVDdWz+SSsmjTT4QN/DfHk3zB/xKsJqMs26bLZ/pNRLnCf0j679i0uWQ==}
@@ -976,11 +983,6 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-
-  shoukaku@https://codeload.github.com/shipgirlproject/Shoukaku/tar.gz/2f50cb7f422a4d953bbb99d13b3bb239fe487978:
-    resolution: {tarball: https://codeload.github.com/shipgirlproject/Shoukaku/tar.gz/2f50cb7f422a4d953bbb99d13b3bb239fe487978}
-    version: 5.0.0-dev
-    engines: {node: '>=18.0.0', npm: '>=7.0.0'}
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -1493,6 +1495,10 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/ws@8.5.13':
+    dependencies:
+      '@types/node': 22.7.6
+
   '@vitest/expect@2.1.3':
     dependencies:
       '@vitest/spy': 2.1.3
@@ -1990,13 +1996,6 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
-
-  shoukaku@https://codeload.github.com/shipgirlproject/Shoukaku/tar.gz/2f50cb7f422a4d953bbb99d13b3bb239fe487978:
-    dependencies:
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   siginfo@2.0.0: {}
 
