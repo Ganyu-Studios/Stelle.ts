@@ -13,7 +13,6 @@ const {
 	...newPackageJsonRaw
 } = packageJson as typeof packageJson & { private: boolean };
 
-
 const newPackageJson = {
 	...newPackageJsonRaw,
 };
