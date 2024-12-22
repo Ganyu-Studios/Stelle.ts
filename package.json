@@ -18,10 +18,10 @@
 		"build": "tsup",
 		"lint": "biome lint .",
 		"typecheck": "tsc --noEmit",
-		"pkg:prepublish": "pnpm build && tsx ./scripts/prepublish.mts && cd .npm && npm pack",
-		"pgk:publish": "cd .npm && npm publish",
 		"format": "biome format --write .",
-		"prepare": "pnpm build && husky"
+		"prepare": "pnpm build && husky",
+		"tool:prepublish": "pnpm build && tsx ./scripts/prepublish.mts && cd .npm && npm pack",
+		"tool:publish": "cd .npm && npm publish"
 	},
 	"keywords": [
 		"discord",
